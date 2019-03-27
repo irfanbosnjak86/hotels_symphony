@@ -16,6 +16,7 @@
 require 'factory_bot'
 
 Dir['./spec/factories/*.rb'].each { |f| require(f) }
+Dir['./spec/support/*.rb'].each { |f| require(f) }
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
