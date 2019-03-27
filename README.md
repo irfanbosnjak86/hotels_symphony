@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This App is part of test job is incomplete. 
+The app should support two types of users, admin and regular.
+The purpose of app is to write reviews about hotels. 
+Missing featurs reviews, favorites, likes/dislikes. 
 
 Things you may want to cover:
 
 * Ruby version
-
-* System dependencies
-
-* Configuration
+    ruby 2.4.1
+    
+* Rails version
+    5.0.7
 
 * Database creation
-
-* Database initialization
+    bundle exec rails db:create db:migrate
 
 * How to run the test suite
+    bundle exec rspec spec
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
