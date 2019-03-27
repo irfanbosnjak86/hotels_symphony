@@ -13,3 +13,7 @@ AllCops:
     - config/spring.rb
 Metrics/LineLength:
   Max: 120
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*"
