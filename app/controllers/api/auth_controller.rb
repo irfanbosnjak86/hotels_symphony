@@ -5,7 +5,7 @@ module Api
       user = User.find_by!(email: params[:email])
 
       if user && user.authenticate(params[:password])
-        user.generate_token
+        user.generate_token!
         render json: user.as_json(only: %i[email authentication_token]), status: :created
       else
         render json: { message: 'Unauthenticated' }, status: 401

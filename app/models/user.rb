@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   enum role: %i[admin regular_user]
 
-  def generate_token
+  def generate_token!
     update!(authentication_token: SecureRandom.hex(15))
   end
 end
