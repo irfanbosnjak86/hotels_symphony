@@ -13,6 +13,7 @@
 
 # Ignore all logfiles and tempfiles.
 /.idea/*
+/test/
 /log/*
 /tmp/*
 !/log/.keep
