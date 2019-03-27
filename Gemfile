@@ -11,16 +11,20 @@ gem 'rails', '~> 5.0.7'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
+  gem 'factory_bot', '~> 4.8', require: false
+  gem 'rubocop', '~> 0.66.0', require: false
 end
 
 group :development do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
 
-  gem 'factory_bot', '~> 4.8', require: false
-  gem 'rubocop', '~> 0.66.0', require: false
+group :test do
+  gem 'database_cleaner', '~> 1.7'
+  gem 'rspec', '~> 3.7'
+  gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

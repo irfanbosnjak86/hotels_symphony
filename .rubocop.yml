@@ -11,3 +11,5 @@ AllCops:
     - config/application.rb
     - config/initializers/*
     - config/spring.rb
+Metrics/LineLength:
+  Max: 120
