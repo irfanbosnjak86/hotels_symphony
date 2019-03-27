@@ -17,3 +17,7 @@ Metrics/LineLength:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "spec/**/*"
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb

@@ -2,6 +2,8 @@ module Api
   module Admin
     # Hotels CRUD
     class HotelsController < ApplicationController
+      before_action :authenticate!, :authorized!
+
       def create
         hotel = Hotel.new(hotel_params)
 
