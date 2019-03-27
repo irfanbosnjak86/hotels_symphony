@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe User, type: :model do
   describe 'validations' do
-    subject { described_class.new(email: email, display_name: display_name, role: role) }
+    subject { described_class.new(email: email, display_name: display_name, role: role, password: password) }
     let(:email) { 'test@text.com' }
     let(:display_name) { 'test_user' }
     let(:role) { 'admin' }
+    let(:password) { '12345678' }
 
     it { is_expected.to be_valid }
 
@@ -16,7 +17,7 @@ RSpec.describe User, type: :model do
 
     context 'when email is not uniq' do
       before do
-        described_class.create(email: email)
+        create(:user, email: email)
       end
 
       it { is_expected.to be_invalid }

@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe API::AuthController, type: :controller do
-
+RSpec.describe Api::AuthController, type: :controller do
   describe '#create' do
     let(:user) { create(:user, email: 'test@text.com') }
     context 'with valid credentials' do

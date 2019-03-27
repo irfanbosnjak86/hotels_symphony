@@ -1,4 +1,4 @@
-module API
+module Api
   # Controller for authenticating user
   class AuthController < ApplicationController
     def create
@@ -6,9 +6,9 @@ module API
 
       if user && user.authenticate(params[:password])
         user.generate_token
-        render json: user.as_json(only: :email), status: :created
+        render json: user.as_json(only: %i[email authentication_token]), status: :created
       else
-        render json: {message: 'Unauthenticated'}, status: 401
+        render json: { message: 'Unauthenticated' }, status: 401
       end
     end
   end
